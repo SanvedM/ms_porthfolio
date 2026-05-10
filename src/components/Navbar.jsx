@@ -94,7 +94,7 @@ function Navbar() {
 
               <h1
                 className="
-                  text-[13px]
+                  text-[28px]
                   xs:text-sm
                   sm:text-lg
                   md:text-2xl
@@ -318,13 +318,17 @@ function Navbar() {
               <button
                 onClick={() => scrollToSection("contact")}
                 className="
-                  bg-[#2A1810]
-                  text-white
-                  h-[42px]
-                  rounded-full
-                  text-sm
-                  mt-2
-                "
+  bg-[#2A1810]
+  text-white
+  h-[28px]
+  px-6
+  rounded-full
+  text-sm
+  mt-2
+  hover:bg-[#3a2418]
+  transition-all
+"
+              style={{"width":"100px", "marginBottom":"6px"}}
               >
                 Get in touch
               </button>
