@@ -74,18 +74,18 @@ function ServiceSection({
   onError={(e) => {
     console.log("Failed image:", image);
   }}
-  className="
-    block
-    w-[320px]
-    h-[320px]
-    object-cover
-    mx-auto
-    rounded-2xl
-    transition-all
-    duration-700
-    group-hover:scale-110
-    group-active:scale-110
-  "
+className="
+  block
+  w-[280px]
+  h-[280px]
+  object-cover
+  mx-auto
+  rounded-2xl
+  transition-all
+  duration-700
+  group-hover:scale-110
+  group-active:scale-110
+"  style={{height:"320px",}}
 />
 
   </div>
