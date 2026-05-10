@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#F5F1EA;
+  color:#2A1810;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+  line-height:1.5;
+}
+
+/* HEADINGS */
+h1,h2,h3,h4,h5{
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height:1.2;
+}
+
+/* IMAGES */
+img{
+  width:100%;
+  display:block;
+  height:auto;
+}
+
+/* MAIN CONTAINER */
+.container-luxury{
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  padding-inline:24px;
+}
+
+/* SECTION SPACING */
+.intro-sec{
+  padding:24px;
+}
+
+/* SMALL DEVICES */
+@media (min-width:640px){
+
+  .container-luxury{
+    padding-inline:40px;
+  }
+
+  .intro-sec{
+    padding-inline:40px;
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+}
+
+/* TABLETS & LAPTOPS */
+@media (min-width:1024px){
+
+  .container-luxury{
+    padding-inline:72px;
+  }
+
+  .intro-sec{
+    padding-inline:72px;
+    padding-top:40px;
+    padding-bottom:30px;
+  }
+}
+
+/* LARGE DESKTOPS */
+@media (min-width:1280px){
+
+  .container-luxury{
+    padding-inline:96px;
+  }
+
+  .intro-sec{
+    padding-inline:96px;
+    padding-top:96px;
+    padding-bottom:72px;
+  }
+}
