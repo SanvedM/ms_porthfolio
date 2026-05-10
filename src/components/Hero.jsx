@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 function Hero() {
   return (
     <section className="relative h-[82vh] overflow-hidden mb-36 md:mb-48">
@@ -23,10 +26,25 @@ function Hero() {
 
 <div className="container-luxury w-full">
 
-          <div className="
-            max-w-2xl
-            pt-16
-          " style={{"paddingTop":"100px"}}>
+          <motion.div
+  initial={{
+    opacity: 0,
+    y: 40
+  }}
+  animate={{
+    opacity: 1,
+    y: 0
+  }}
+  transition={{
+    duration: 1.2,
+    delay: 0.5
+  }}
+  className="
+    max-w-2xl
+    pt-16
+  "
+  style={{ paddingTop: "100px" }}
+>
 
             {/* TOP SMALL TEXT */}
             <p className="
@@ -145,7 +163,7 @@ function Hero() {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

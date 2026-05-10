@@ -35,14 +35,14 @@ function ServiceSection({
 <motion.div
   initial={{
     opacity: 0,
-    y: 80
+    x: reverse ? 120 : -120
   }}
   whileInView={{
     opacity: 1,
-    y: 0
+    x: 0
   }}
   transition={{
-    duration: 1
+    duration: 1.6
   }}
   viewport={{ once: true }}
   className={`
@@ -50,7 +50,6 @@ function ServiceSection({
     rounded-2xl
   `}
 >
-
   <div className="relative rounded-2xl overflow-hidden">
 
     <div
