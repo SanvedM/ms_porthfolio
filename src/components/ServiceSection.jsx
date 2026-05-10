@@ -35,63 +35,58 @@ function ServiceSection({
 <motion.div
   initial={{
     opacity: 0,
-    x: reverse ? 120 : -120
+    y: 80
   }}
-
   whileInView={{
     opacity: 1,
-    x: 0
+    y: 0
   }}
-
   transition={{
-    duration: 1.6
+    duration: 1
   }}
-
   viewport={{ once: true }}
-
   className={`
     ${reverse ? "lg:order-2" : ""}
-    overflow-hidden
     rounded-2xl
-    group
-    cursor-pointer
   `}
 >
 
-  <div className="relative overflow-hidden rounded-2xl">
-
-    {/* DARK OVERLAY */}
+  <div className="relative rounded-2xl overflow-hidden">
 
     <div
+      className="
+        absolute
+        inset-0
+        bg-black/0
+        group-hover:bg-black/20
+        transition-all
+        duration-500
+        z-10
+      "
+    />
+<img
+  src={image}
+  alt={title}
+  loading="eager"
+  decoding="async"
+  draggable="false"
+  fetchPriority="high"
+  onError={(e) => {
+    console.log("Failed image:", image);
+  }}
   className="
-    absolute
-    inset-0
-    bg-black/0
-    group-hover:bg-black/25
-    group-active:bg-black/25
+    block
+    w-[320px]
+    h-[320px]
+    object-cover
+    mx-auto
+    rounded-2xl
     transition-all
-    duration-500
-    z-10
+    duration-700
+    group-hover:scale-110
+    group-active:scale-110
   "
 />
-
-    {/* IMAGE */}
-
-    <img
-      src={image}
-      alt={title}
-      className="
-  w-[320px]
-  h-[320px]
-  object-cover
-  mx-auto
-  rounded-2xl
-  transition-all
-  duration-700
-  group-hover:scale-110
-  group-active:scale-110
-"
-    />
 
   </div>
 
