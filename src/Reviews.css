@@ -1,0 +1,176 @@
+.review-section{
+    padding:20px 20px;
+    text-align:center;
+    overflow:hidden;
+    background: rgb(238, 231, 231);
+    color:rgb(27, 27, 27);
+    position:relative;
+}
+
+.review-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(237, 240, 245, 0.12);
+    filter:blur(120px);
+    top:-180px;
+    right:-120px;
+}
+
+.review-subtitle{
+    text-transform:uppercase;
+    letter-spacing:5px;
+    color:#4da6ff;
+    margin-bottom:14px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.review-title{
+    font-size:42px;
+    margin-bottom:70px;
+    font-weight:400;
+    line-height:1.2;
+}
+
+.review-slider{
+    max-width:850px;
+    margin:auto;
+    min-height:320px;
+    position:relative;
+}
+
+/* CARD */
+
+.review-card{
+    background:whitesmoke;
+
+    border-radius:35px;
+
+    padding:55px;
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.5),
+    inset 0 0 0 1px rgba(255,255,255,.03);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* glow line */
+
+.review-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#0066ff;
+    opacity:.15;
+    filter:blur(70px);
+    top:-60px;
+    right:-40px;
+}
+
+.stars{
+    font-size:28px;
+    margin-bottom:25px;
+    color:#4da6ff;
+    letter-spacing:4px;
+}
+
+.review-text{
+    font-size:18px;
+    line-height:2;
+    color:black;
+    margin-bottom:40px;
+    max-width:620px;
+    margin-inline:auto;
+}
+
+.review-user{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.review-user h4{
+    font-size:22px;
+    margin-bottom:6px;
+    color:white;
+}
+
+.review-user span{
+    color:#7ea4d8;
+    font-size:14px;
+}
+
+/* animated dots */
+
+.dots{
+    margin-top:35px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#F5F1EA;
+    display:inline-block;
+    margin:0 7px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.dot:hover{
+    transform:scale(1.3);
+}
+
+.dot.active{
+    width:35px;
+    border-radius:30px;
+    background:
+    linear-gradient(
+    to right,
+    #0066ff,
+    #4da6ff
+    );
+
+    box-shadow:
+    0 0 15px rgba(0,102,255,.8);
+}
+
+/* Right -> Left feel */
+.review-slider{
+    direction:rtl;
+}
+
+@media(max-width:768px){
+
+.review-section{
+    padding:20px 18px;
+}
+
+.review-title{
+    font-size:28px;
+    margin-bottom:50px;
+}
+
+.review-card{
+    padding:35px 25px;
+    border-radius:25px;
+}
+
+.review-text{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.stars{
+    font-size:22px;
+}
+
+}

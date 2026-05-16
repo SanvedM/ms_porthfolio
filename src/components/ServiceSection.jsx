@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "../ServiceSection.css";
 
 function ServiceSection({
   title,
@@ -6,261 +7,118 @@ function ServiceSection({
   image,
   reverse
 }) {
-
   return (
-
     <section
-      className="py-32 md:py-40 mt-32 md:mt-40"
+      className="service-section"
       id="services"
     >
+      <div className="service-container">
 
-      <div
-        className="container-luxury"
-        style={{ paddingBottom: "60px" }}
-      >
-
-        <div
-          className="
-            grid
-            grid-cols-1
-            lg:grid-cols-2
-            gap-16
-            items-center
-          "
-        >
+        <div className="service-grid">
 
           {/* IMAGE */}
-{/* IMAGE */}
 
-<motion.div
-  initial={{
-    opacity: 0,
-    x: reverse ? 120 : -120
-  }}
-  whileInView={{
-    opacity: 1,
-    x: 0
-  }}
-  transition={{
-    duration: 1.6
-  }}
-  viewport={{ once: true }}
-  className={`
-    ${reverse ? "lg:order-2" : ""}
-    rounded-2xl
-  `}
->
-  <div className="relative rounded-2xl overflow-hidden">
+          <motion.div
+            initial={{
+              opacity:0,
+              x: reverse ? 60 : -60
+            }}
+            whileInView={{
+              opacity:1,
+              x:0
+            }}
+            transition={{
+              duration:1
+            }}
+            viewport={{
+              once:true
+            }}
+            className={`image-wrap ${
+              reverse ? "reverse-image" : ""
+            }`}
+          >
 
-    <div
-      className="
-        absolute
-        inset-0
-        bg-black/0
-        group-hover:bg-black/20
-        transition-all
-        duration-500
-        z-10
-      "
-    />
-<img
-  src={image}
-  alt={title}
-  loading="eager"
-  decoding="async"
-  draggable="false"
-  fetchPriority="high"
-  onError={(e) => {
-    console.log("Failed image:", image);
-  }}
-className="
-  block
-  w-[280px]
-  h-[280px]
-  object-cover
-  mx-auto
-  rounded-2xl
-  transition-all
-  duration-700
-  group-hover:scale-110
-  group-active:scale-110
-"  style={{height:"320px",}}
-/>
+            <div className="image-box">
 
-  </div>
+              <div className="image-overlay"/>
 
-</motion.div>
+              <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                draggable="false"
+                className="service-image"
+              />
+
+            </div>
+
+          </motion.div>
+
           {/* CONTENT */}
 
           <motion.div
             initial={{
-              opacity: 0,
-              x: reverse ? -120 : 120
+              opacity:0,
+              x: reverse ? -60 : 60
             }}
             whileInView={{
-              opacity: 1,
-              x: 0
+              opacity:1,
+              x:0
             }}
             transition={{
-              duration: 1.6
+              duration:1
             }}
-            viewport={{ once: true }}
-            className={`
-              flex
-              flex-col
-              gap-2
-              ${reverse ? "lg:order-1" : ""}
-            `}
+            viewport={{
+              once:true
+            }}
+            className={`content-wrap ${
+              reverse ? "reverse-content" : ""
+            }`}
           >
 
-            <p
-              className="
-                uppercase
-                tracking-[4px]
-                text-sm
-                text-[#7b6d60]
-              "
-            >
+            <p className="service-small">
               —— Service
             </p>
 
-            <h2
-              className="
-  text-4xl
-  leading-tight
-  hover:text-orange-500
-  active:text-orange-500
-  transition
-  duration-300
-  cursor-pointer
-"
-            >
+            <h2 className="service-title">
               {title}
             </h2>
 
-            <p
-              className="
-                text-[#6c5f55]
-                text-base
-                leading-relaxed
-              "
-            >
+            <p className="service-desc">
               {desc}
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="tags">
 
-  <span
-    className="
-      px-4
-      py-1
-      rounded-full
-      text-[11px]
-      tracking-[3px]
-      uppercase
-      font-light
-      text-[#7b6d60]
-      border
-      border-[#d8cfc4]
-      bg-[#f8f4ef]
-      hover:bg-[#2A1810]
-      hover:text-white
-      active:bg-[#2A1810]
-      active:text-white
-      transition-all
-      duration-300
-    "
-    style={{
-      fontFamily: "Georgia, serif",
-      padding:"2px 5px"
-    }}
-  >
-    Premium
-  </span>
+              {[
+                "Premium",
+                "Luxury",
+                "Custom"
+              ].map((item)=>(
 
-  <span
-    className="
-      px-4
-      py-1
-      rounded-full
-      text-[11px]
-      tracking-[3px]
-      uppercase
-      font-light
-      text-[#7b6d60]
-      border
-      border-[#d8cfc4]
-      bg-[#f8f4ef]
-      hover:bg-[#2A1810]
-      hover:text-white
-      active:bg-[#2A1810]
-      active:text-white
-      transition-all
-      duration-300
-    "
-    style={{
-      fontFamily: "Georgia, serif",
-      padding:"2px 5px"
-    }}
-  >
-    Luxury
-  </span>
+                <span
+                  key={item}
+                  className="tag"
+                >
+                  {item}
+                </span>
 
-  <span
-    className="
-      px-4
-      py-1
-      rounded-full
-      text-[11px]
-      tracking-[3px]
-      uppercase
-      font-light
-      text-[#7b6d60]
-      border
-      border-[#d8cfc4]
-      bg-[#f8f4ef]
-      hover:bg-[#2A1810]
-      hover:text-white
-      active:bg-[#2A1810]
-      active:text-white
-      transition-all
-      duration-300
-    "
-    style={{
-      fontFamily: "Georgia, serif",
-      padding:"2px 5px"
-    }}
-  >
-    Custom
-  </span>
+              ))}
 
-</div>
+            </div>
 
-<button
-
-  onClick={() => {
-    document
-      .getElementById("contact")
-      ?.scrollIntoView({
-        behavior: "smooth"
-      });
-  }}
-
- className="
-  border-b
-  border-black
-  pb-2
-  w-fit
-  hover:text-orange-500
-  hover:border-orange-500
-  active:text-orange-500
-  active:border-orange-500
-  transition
-  duration-300
-"
->
-  Enquire now →
-</button>
+            <button
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({
+                    behavior:"smooth"
+                  });
+              }}
+              className="enquire-btn"
+            >
+              Enquire now →
+            </button>
 
           </motion.div>
 

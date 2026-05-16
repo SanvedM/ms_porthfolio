@@ -1,13 +1,12 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import "../Contact.css";
 
 function Contact() {
-
   const form = useRef();
 
   const sendEmail = (e) => {
-
     e.preventDefault();
 
     emailjs.sendForm(
@@ -16,244 +15,145 @@ function Contact() {
       form.current,
       "laVgj3NfHvxUiBthE"
     )
-
     .then(() => {
-
-      toast.success("Message sent successfully!");
+      toast.success(
+        "Message sent successfully!"
+      );
 
       form.current.reset();
-
     })
-
     .catch((error) => {
-
       console.log(error);
 
-      toast.error("Failed to send message");
-
+      toast.error(
+        "Failed to send message"
+      );
     });
   };
 
   return (
     <>
-  <Toaster
-    position="top-right"
-    toastOptions={{
-      style: {
-        background: "#2A1810",
-        color: "#fff",
-        borderRadius: "12px",
-        padding: "14px 18px"
-      }
-    }}
-  />
+      <Toaster />
 
-
-    <section
-      id="contact"
-      style={{
-        background: "#dbd4c82",
-        paddingTop: "70px",
-        paddingBottom: "70px"
-      }}
-    >
-
-      <div
-        className="container-luxury"
-        style={{
-          maxWidth: "900px",
-          margin: "0 auto"
-        }}
+      <section
+        id="contact"
+        className="contact"
       >
 
-        <div className="text-center">
+        <div className="contact-container">
 
-          <p
-            className="
-              uppercase
-              tracking-[2px]
-              text-sm
-            "
-            style={{ color: "#7b6d60" }}
-          >
-            Get in touch
-          </p>
+          <div className="contact-grid">
 
-          <h2
-            className="
-              text-4xl
-              md:text-5xl
-              mt-6
-              leading-tight
-            "
-            style={{
-              color: "#2A1810",
-              fontFamily: "Georgia, serif"
-            }}
-          >
-            Let's talk about your space.
-          </h2>
+            {/* LEFT */}
 
-          <p
-            className="mt-8 text-m"
-            style={{
-              color: "#7b6d60",
-              padding: "10px"
-            }}
-          >
-            Drop us a line — we reply within two working days.
-          </p>
+            <div>
+
+              <p className="contact-tag">
+                CONTACT
+              </p>
+
+              <h2 className="contact-title">
+                Let's design your
+                <span>
+                  {" "}next wall.
+                </span>
+              </h2>
+
+              <p className="contact-sub">
+                Discover premium paints, texture finishes, and expert guidance for homes, offices, and commercial projects
+              </p>
+
+              <div className="contact-info">
+
+                {[
+                  ["📞","PHONE","+91 98765 43210"],
+                  ["✉️","EMAIL","hello@mstrade.in"],
+                  ["📍","ADDRESS","Mumbai, India"],
+                  ["🕒","WORKING HOURS","Mon–Sat · 10AM–9PM"]
+                ].map(
+                  ([icon,title,value])=>(
+
+                  <div
+                    key={title}
+                    className="info-box"
+                  >
+
+                    <div className="info-icon">
+                      {icon}
+                    </div>
+
+                    <div>
+                      <p className="small">
+                        {title}
+                      </p>
+
+                      <h3>
+                        {value}
+                      </h3>
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+            {/* FORM */}
+
+            <div className="form-box">
+
+              <h3>
+                Request a free consultation
+              </h3>
+
+              <p>
+                We'll call back within
+                30 minutes.
+              </p>
+
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="contact-form"
+              >
+
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Your name"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Email"
+                  required
+                />
+
+                <textarea
+                  rows="5"
+                  name="message"
+                  placeholder="Tell us about your project..."
+                />
+
+                <button type="submit">
+                  Send Inquiry →
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
 
         </div>
 
-        {/* FORM */}
+      </section>
 
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="mt-24"
-          style={{
-            maxWidth: "580px",
-            margin: "0 auto"
-          }}
-        >
-
-          {/* NAME */}
-
-          <div style={{ marginBottom: "60px" }}>
-
-            <label
-              className="
-                uppercase
-                tracking-[2px]
-                text-sm
-              "
-              style={{ color: "#7b6d60" }}
-            >
-              Your Name
-            </label>
-
-            <input
-              type="text"
-              name="user_name"
-              required
-              className="
-                w-full
-                bg-transparent
-                outline-none
-                mt-6
-                pb-4
-              "
-              style={{
-                borderBottom: "1px solid #b9aa9b",
-                fontSize: "18px",
-                color: "#2A1810"
-              }}
-            />
-
-          </div>
-
-          {/* EMAIL */}
-
-          <div style={{ marginBottom: "60px" }}>
-
-            <label
-              className="
-                uppercase
-                tracking-[2px]
-                text-sm
-              "
-              style={{ color: "#7b6d60" }}
-            >
-              Email Address
-            </label>
-
-            <input
-              type="email"
-              name="user_email"
-              required
-              className="
-                w-full
-                bg-transparent
-                outline-none
-                mt-6
-                pb-4
-              "
-              style={{
-                borderBottom: "1px solid #b9aa9b",
-                fontSize: "18px",
-                color: "#2A1810"
-              }}
-            />
-
-          </div>
-
-          {/* MESSAGE */}
-
-          <div>
-
-            <label
-              className="
-                uppercase
-                tracking-[2px]
-                text-sm
-              "
-              style={{ color: "#7b6d60" }}
-            >
-              How can we help?
-            </label>
-
-            <textarea
-              rows="4"
-              name="message"
-              required
-              placeholder="A few lines about your project..."
-              className="
-                w-full
-                bg-transparent
-                outline-none
-                mt-6
-                pb-4
-                resize-none
-              "
-              style={{
-                borderBottom: "1px solid #b9aa9b",
-                fontSize: "18px",
-                color: "#2A1810"
-              }}
-            ></textarea>
-
-          </div>
-
-          {/* BUTTON */}
-
-          <button
-            type="submit"
-            className="
-              mt-16
-              px-10
-              py-4
-              rounded-full
-              text-white
-              transition
-              duration-300
-            "
-            style={{
-              background: "#2A1810",
-              fontSize: "16px",
-              width:"140px",
-              height:"30px"
-            }}
-          >
-            Send enquiry →
-          </button>
-
-        </form>
-
-      </div>
-
-    </section>
-</>
+    </>
   );
 }
 

@@ -16,9 +16,9 @@ function Intro() {
         </p>
 
         <h2 className="
-          text-5xl
-          md:text-4xl
-          max-w-4xl
+          text-3xl
+          md:text-2xl
+          max-w-3xl
           leading-tight
         ">
           Our Comprehensive Solutions

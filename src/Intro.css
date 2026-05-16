@@ -1,0 +1,60 @@
+.intro-section {
+
+}
+
+.intro-offer {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.875rem; /* text-sm */
+  color: #7b6d60;
+  margin-bottom: 1.5rem;
+  padding: 3rem; /* p-12 */
+}
+
+.intro-heading {
+  font-size: 3rem; /* text-5xl */
+  line-height: 1.25;
+  max-width: 56rem; /* max-w-4xl */
+}
+
+.intro-text {
+  font-size: 1rem; /* text-m equivalent */
+  color: #7b6d60;
+  margin-bottom: 1.5rem;
+  padding: 3rem; /* p-12 */
+}
+
+/* md breakpoint = 768px */
+@media (min-width: 768px) {
+  .intro-section {
+
+  }
+
+  .intro-heading {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+}
+
+/* mobile improvements */
+@media (max-width: 768px) {
+  .intro-offer,
+  .intro-text {
+    padding: 1rem;
+  }
+
+  .intro-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-heading {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .intro-offer {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+}
