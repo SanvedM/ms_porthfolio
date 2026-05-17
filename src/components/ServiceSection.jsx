@@ -1,132 +1,158 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "../ServiceSection.css";
 
-function ServiceSection({
-  title,
-  desc,
-  image,
-  reverse
-}) {
+function ServiceSection({ services }) {
+
+  const [active,setActive]=useState(0);
+
   return (
-    <section
-      className="service-section"
-      id="services"
-    >
-      <div className="service-container">
 
-        <div className="service-grid">
+<section
+className="services-section"
+id="services"
+>
 
-          {/* IMAGE */}
+<div className="service-container">
 
-          <motion.div
-            initial={{
-              opacity:0,
-              x: reverse ? 60 : -60
-            }}
-            whileInView={{
-              opacity:1,
-              x:0
-            }}
-            transition={{
-              duration:1
-            }}
-            viewport={{
-              once:true
-            }}
-            className={`image-wrap ${
-              reverse ? "reverse-image" : ""
-            }`}
-          >
+<h1 className="service-small-heading">
+Services
+</h1>
 
-            <div className="image-box">
+<p className="sub-heading">
+Tap a service to see what's inside.
+</p>
 
-              <div className="image-overlay"/>
 
-              <img
-                src={image}
-                alt={title}
-                loading="lazy"
-                draggable="false"
-                className="service-image"
-              />
+{/* TOP PILL BAR */}
 
-            </div>
+<div className="service-tabs">
 
-          </motion.div>
+{
+services.map((item,index)=>(
 
-          {/* CONTENT */}
+<button
+key={index}
+onClick={()=>
+setActive(index)
+}
+className={`tab ${
+active===index
+? "active":""
+}`}
+>
 
-          <motion.div
-            initial={{
-              opacity:0,
-              x: reverse ? -60 : 60
-            }}
-            whileInView={{
-              opacity:1,
-              x:0
-            }}
-            transition={{
-              duration:1
-            }}
-            viewport={{
-              once:true
-            }}
-            className={`content-wrap ${
-              reverse ? "reverse-content" : ""
-            }`}
-          >
+{item.title}
 
-            <p className="service-small">
-              —— Service
-            </p>
+</button>
 
-            <h2 className="service-title">
-              {title}
-            </h2>
+))
+}
 
-            <p className="service-desc">
-              {desc}
-            </p>
+</div>
 
-            <div className="tags">
 
-              {[
-                "Premium",
-                "Luxury",
-                "Custom"
-              ].map((item)=>(
+<AnimatePresence mode="wait">
 
-                <span
-                  key={item}
-                  className="tag"
-                >
-                  {item}
-                </span>
+<motion.div
+key={active}
 
-              ))}
+initial={{
+opacity:0,
+y:25
+}}
 
-            </div>
+animate={{
+opacity:1,
+y:0
+}}
 
-            <button
-              onClick={() => {
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({
-                    behavior:"smooth"
-                  });
-              }}
-              className="enquire-btn"
-            >
-              Enquire now →
-            </button>
+exit={{
+opacity:0,
+y:-25
+}}
 
-          </motion.div>
+transition={{
+duration:.5
+}}
 
-        </div>
+className="service-grid"
+>
 
-      </div>
 
-    </section>
+<div className="image-box">
+
+<img
+src={services[active].image}
+alt=""
+className="service-image"
+/>
+
+</div>
+
+
+
+<div className="content-wrap">
+
+<h2 className="service-title">
+
+{services[active].title}
+
+</h2>
+
+<p className="service-desc">
+
+{services[active].desc}
+
+</p>
+
+
+<div className="features">
+
+<div className="feature">
+✓ Premium materials
+</div>
+
+<div className="feature">
+✓ Professional finish
+</div>
+
+<div className="feature">
+✓ Trusted service
+</div>
+
+</div>
+
+
+<button
+className="quote-btn"
+
+onClick={()=>{
+document
+.getElementById("contact")
+?.scrollIntoView({
+behavior:"smooth"
+})
+}}
+>
+
+Enquire now →
+
+</button>
+
+</div>
+
+</motion.div>
+
+
+
+
+</AnimatePresence>
+
+</div>
+
+</section>
+
   );
 }
 

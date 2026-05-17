@@ -1,7 +1,9 @@
 .intro-section {
 
 }
-
+.intro-sec {
+  padding-bottom: 10px;
+    }
 .intro-offer {
   text-transform: uppercase;
   letter-spacing: 4px;

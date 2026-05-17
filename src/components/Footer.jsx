@@ -10,18 +10,18 @@ function Footer() {
 
         <div className="footer-brand">
 
-          <h2>MS Trading Company</h2>
+          <h2>MS Trading</h2>
 
           <p>
-            Premium paint trading and interior design —
-            creating modern and elegant spaces since 2009.
+            -since 2009.
           </p>
 
         </div>
 
         {/* VISIT */}
 
-        <div>
+        {/* VISIT */}
+        <div className="foottt">
 
           <p className="footer-heading">
             Visit

@@ -8,13 +8,23 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
 
-  const scrollToSection = (id) => {
+ const scrollToSection = (id) => {
+
+  if(id === "home"){
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  } else {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
+  }
 
-    setMenuOpen(false);
-  };
+  setMenuOpen(false);
+};
+
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,8 +88,8 @@ function Navbar() {
               {[
                 ["Home","home"],
                 ["Services","services"],
-                ["Reviews","reviews"],
                 ["Contact","contact"],
+                ["Reviews","reviews"],
               ].map(([label,id]) => (
 
                 <button
@@ -133,13 +143,10 @@ function Navbar() {
         <div className="mobile-menu">
 
           {[
-            ["Home","home"],
-            ["Collections","collections"],
-            ["Textures","textures"],
-            ["Services","services"],
-            ["Stores","stores"],
-            ["Reviews","reviews"],
-            ["Contact","contact"]
+                ["Home","home"],
+                ["Services","services"],
+                ["Contact","contact"],
+                ["Reviews","reviews"],
           ].map(([label,id]) => (
 
             <button

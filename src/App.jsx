@@ -58,7 +58,7 @@ function App() {
 
       <Intro />
 
-      {services.map((item, index) => (
+      {/* {services.map((item, index) => (
         <ServiceSection
           key={index}
           index={index}
@@ -67,7 +67,8 @@ function App() {
           image={item.image}
           reverse={item.reverse}
         />
-      ))}
+      ))} */}
+      <ServiceSection services={services}/>
 
       {/* <Owners /> */}
 

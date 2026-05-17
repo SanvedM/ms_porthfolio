@@ -4,7 +4,7 @@ import logo from "../assets/slider11.png";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
 
       <img
         src={logo}
