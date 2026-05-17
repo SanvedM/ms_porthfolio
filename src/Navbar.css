@@ -255,3 +255,86 @@ right:10px;
 }
 
 }
+
+/* FLOATING CALL */
+
+.floating-call{
+display:none;
+
+position:fixed;
+
+bottom:25px;
+right:20px;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:#0b66d1;
+color:white;
+
+font-size:28px;
+text-decoration:none;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:
+0 8px 25px rgba(11,102,209,.4);
+
+z-index:10000;
+
+animation:pulse 2s infinite;
+
+transition:.3s;
+}
+
+.floating-call:hover{
+transform:scale(1.1);
+}
+
+
+/* SHOW ONLY TABLET + MOBILE */
+
+@media(max-width:1280px){
+
+.floating-call{
+display:flex;
+}
+
+}
+
+
+/* HIDE ON DESKTOP */
+
+@media(min-width:1281px){
+
+.floating-call{
+display:none;
+}
+
+}
+
+
+/* PULSE EFFECT */
+
+@keyframes pulse{
+
+0%{
+box-shadow:
+0 0 0 0 rgba(11,102,209,.6);
+}
+
+70%{
+box-shadow:
+0 0 0 18px rgba(11,102,209,0);
+}
+
+100%{
+box-shadow:
+0 0 0 0 rgba(11,102,209,0);
+}
+
+}

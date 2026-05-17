@@ -165,6 +165,14 @@ function Navbar() {
 
       )}
 
+      {/* FLOATING CALL BUTTON FOR MOBILE/TABLET */}
+
+        <a
+          href="tel:+919876543210"
+          className="floating-call"
+        >
+          📞
+        </a>
     </>
   );
 }
