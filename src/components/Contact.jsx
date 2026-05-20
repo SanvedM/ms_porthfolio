@@ -66,10 +66,10 @@ function Contact() {
               <div className="contact-info">
 
                 {[
-                  ["📞","PHONE","+91 98765 43210"],
-                  ["✉️","EMAIL","hello@mstrade.in"],
-                  ["📍","ADDRESS","Mumbai, India"],
-                  ["🕒","WORKING HOURS","Mon–Sat · 10AM–9PM"]
+                  ["📞","PHONE","+919082249851/+917045286805"],
+                  ["✉️","EMAIL","mstradingcompany348@gmail.com"],
+                  ["📍","ADDRESS","Office No-7 Near Yatri Hotel,Santacruiz(E) India"],
+                  ["🕒","WORKING HOURS","Mon–Sat · 10AM–7PM"]
                 ].map(
                   ([icon,title,value])=>(
 

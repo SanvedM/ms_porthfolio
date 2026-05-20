@@ -28,7 +28,7 @@ function Footer() {
           </p>
 
           <div className="footer-content">
-            Pune, Maharashtra <br />
+            Office No-7 Near Yatri Hotel,Santacruiz(E) India <br />
             Mon–Sat · 10am–7pm
           </div>
 
@@ -44,8 +44,8 @@ function Footer() {
           </p>
 
           <div className="footer-content">
-            info@mstrading.com <br />
-            +91 98765 43210
+            mstradingcompany348@gmail.com <br />
+            "+919082249851/+917045286805"
           </div>
 
         </div>

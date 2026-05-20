@@ -112,7 +112,7 @@ function Navbar() {
 
               <button
   onClick={() =>
-    window.location.href = "tel:+919876543210"
+    window.location.href = "tel:+919082249851"
   }
   className="call-btn"
 >
@@ -168,7 +168,7 @@ function Navbar() {
       {/* FLOATING CALL BUTTON FOR MOBILE/TABLET */}
 
         <a
-          href="tel:+919876543210"
+          href="tel:+919082249851"
           className="floating-call"
         >
           📞
