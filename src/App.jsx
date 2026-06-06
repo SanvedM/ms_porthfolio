@@ -11,7 +11,7 @@ import paint1 from "./assets/paint1.png";
 import paint2 from "./assets/paint2.png";
 import paint4 from "./assets/paint4.png";
 import Reviews from "./components/Reviews";
-import OurWorks from "./components/Ourworks";
+import OurWorks from "./components/OurWorks" 
 
 function App() {
 
