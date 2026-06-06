@@ -72,7 +72,7 @@ min-width:42px;
 
 display:flex;
 align-items:center;
-justify-content:center;
+/* justify-content:center; */
 
 color:white;
 
@@ -236,6 +236,13 @@ padding:12px;
 width:100%;
 }
 
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin: 0 -40px;
+}
+
 }
 
 /* VERY SMALL DEVICES */
@@ -270,6 +277,12 @@ width:100%;
 
 .form-box h3{
 font-size:24px;
+}
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin: 0 -40px;
 }
 
 }
