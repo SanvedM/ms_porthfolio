@@ -13,7 +13,7 @@ import paint4 from "./assets/paint4.png";
 import Reviews from "./components/Reviews";
 import OurWorks from "./components/OurWorks";
 
-
+import { Helmet } from "react-helmet-async";
 function App() {
 
   useEffect(() => {
@@ -51,38 +51,58 @@ function App() {
     }
   ];
 
-  return (
-    <div className="bg-[#F5F1EA] text-[#2A1810]">
+return (
+  <>
+    <Helmet>
+      <title>
+        M S Traders | Interior Design, Architecture & Construction
+      </title>
 
+      <meta
+        name="description"
+        content="M S Traders provides Interior Design, Architecture, Building Construction, Civil Work, Painting, Carpentry, Plumbing, Electrical and POP Work services for residential and commercial projects."
+      />
+
+      <meta
+        name="keywords"
+        content="interior design, architecture, construction services, building construction, civil work, painting services, carpentry, plumbing, electrical work, pop work"
+      />
+
+      <meta name="geo.region" content="IN-MH" />
+      <meta name="geo.placename" content="Pune" />
+
+      <meta
+        property="og:title"
+        content="M S Traders | Interior Design & Construction"
+      />
+
+      <meta
+        property="og:description"
+        content="Professional Interior Design, Architecture, Civil Work, Painting, Carpentry, Plumbing, Electrical and POP Services."
+      />
+
+      <meta property="og:type" content="website" />
+    </Helmet>
+
+    <div className="bg-[#F5F1EA] text-[#2A1810]">
       <Navbar />
 
       <Hero />
 
       <Intro />
 
-      {/* {services.map((item, index) => (
-        <ServiceSection
-          key={index}
-          index={index}
-          title={item.title}
-          desc={item.desc}
-          image={item.image}
-          reverse={item.reverse}
-        />
-      ))} */}
-      <ServiceSection services={services}/>
+      <ServiceSection services={services} />
 
-      {/* <Owners /> */}
-      <OurWorks/>
-
+      <OurWorks />
 
       <Contact />
-      <Reviews/>
+
+      <Reviews />
 
       <Footer />
-
     </div>
-  );
+  </>
+);
 }
 
 export default App;

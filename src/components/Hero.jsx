@@ -8,7 +8,7 @@ function Hero() {
 
       <img
         src={logo}
-        alt=""
+        alt="ms trading"
         className="hero-image"
       />
 

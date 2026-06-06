@@ -49,7 +49,7 @@ function Contact() {
             <div>
 
               <p className="contact-tag">
-                CONTACT
+                Contact Us
               </p>
 
               <h2 className="contact-title">

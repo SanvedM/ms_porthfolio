@@ -64,7 +64,7 @@ padding:40px 20px;
 display:grid;
 
 grid-template-columns:
-repeat(3,1fr);
+repeat(4,1fr);
 
 gap:40px;
 text-align: -webkit-center;
@@ -177,7 +177,7 @@ padding:40px 20px;
 display:grid;
 
 grid-template-columns:
-repeat(3,1fr);
+repeat(4,1fr);
 
 justify-content: space-between;
 text-align: -webkit-center;
@@ -253,4 +253,20 @@ margin-bottom:10px;
 }
 
 
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.65);
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#4da6ff;
 }

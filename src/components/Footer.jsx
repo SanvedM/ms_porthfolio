@@ -35,6 +35,31 @@ function Footer() {
         </div>
 
 
+        {/* QUICK LINKS */}
+
+<div>
+  <p className="footer-heading">
+    Quick Links
+  </p>
+
+  <div className="footer-links">
+
+    <a href="#home">Home</a>
+
+    <a href="#about">About</a>
+
+    <a href="#services">Services</a>
+
+    <a href="#our-work">Projects</a>
+
+    <a href="#contact">Contact</a>
+
+  </div>
+</div>
+
+        
+
+
         {/* CONTACT */}
 
         <div>
