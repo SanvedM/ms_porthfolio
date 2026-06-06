@@ -88,6 +88,7 @@ function Navbar() {
               {[
                 ["Home","home"],
                 ["Services","services"],
+                ["Our Work","our-work"],
                 ["Contact","contact"],
                 ["Reviews","reviews"],
               ].map(([label,id]) => (
@@ -145,6 +146,7 @@ function Navbar() {
           {[
                 ["Home","home"],
                 ["Services","services"],
+                ["Our Work","our-work"],
                 ["Contact","contact"],
                 ["Reviews","reviews"],
           ].map(([label,id]) => (

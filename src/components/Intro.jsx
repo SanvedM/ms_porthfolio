@@ -1,40 +1,29 @@
-function Intro() {
-  return (
-    <section className="pt-24 md:pt-32 pb-40 md:pb-52" id="services">
 
+import "../Intro.css";
+
+  function Intro() {
+  return (
+    <section className="intro-section" id="services">
       <div className="container-luxury intro-sec">
 
-        <p className="
-          uppercase
-          tracking-[4px]
-          text-sm
-          text-[#7b6d60]
-          mb-6
-          p-12
-        ">
+        <p className="intro-offer">
           What we offer
         </p>
 
-        <h2 className="
-          text-3xl
-          md:text-2xl
-          max-w-3xl
-          leading-tight
-        ">
+        <h2 className="intro-heading">
           Our Comprehensive Solutions
         </h2>
 
-        <p className="
-          text-m
-          text-[#7b6d60]
-          mb-6
-          p-12
-        ">
-          From premium supplies to expert execution, we provide a complete ecosystem for your painting and design needs. We combine high-quality products with professional consultancy to bring lasting color and refined finishes to every surface.
+        <p className="intro-text">
+          M.S. Trading Company Painting Contractors firm of Mumbai is a
+          family-owned, large-scale residential interior and commercial
+          painting company. We provide painting, lamination, and polish work
+          of various concepts as per client requirements. We are well known
+          for quality workmanship, friendly service, and reliable project
+          execution.
         </p>
 
       </div>
-
     </section>
   );
 }

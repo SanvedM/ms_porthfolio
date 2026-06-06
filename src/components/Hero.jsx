@@ -33,8 +33,8 @@ function Hero() {
             </p>
 
             <h1 className="hero-title">
-              Your Trusted Partner in Color & Design.
-            </h1>
+              Your Trusted Partner in <span className="color-class"> Color & Design.
+            </span></h1>
 
             <p className="hero-subtitle">
               Supplying the finest paints and professional

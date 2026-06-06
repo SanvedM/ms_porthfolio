@@ -13,6 +13,23 @@ overflow-x:hidden;
 }
 
 
+:root{
+        --navy: #1b3472;
+    --teal: teal;
+    --teal-light: #00a8a8;
+    --teal-pale: #e6f2f2;
+    --navy-dark: #0f1f45;
+    --navy-light: #2a4fa3;
+    --white: #fff;
+    --gray-light: #f7f9fc;
+    --gray: #6b7280;
+    --text-dark: #1a1a2e;
+    --shadow: 0 4px 24px #1b34721f;
+    --shadow-lg: 0 8px 48px #1b34722e;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* NAVBAR WRAPPER */
 
 .navbar-wrap{
@@ -41,6 +58,9 @@ transition:.5s;
 background:rgba(255,255,255,.4);
 backdrop-filter:blur(20px);
 box-shadow:0 10px 30px rgba(0,0,0,.1);
+color: var(--navy-light);
+font-weight: 700;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 
@@ -57,6 +77,10 @@ padding:0 20px;
 
 min-width:0;
 overflow:hidden;
+font-weight: 600;
+font-family: "Playfair Display", serif;
+
+
 }
 
 
@@ -93,6 +117,14 @@ text-overflow:ellipsis;
 display:flex;
 align-items:center;
 gap:8px;
+border-radius: 8px;
+    font-size: .92rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 6px #0003;
+    transition: all .3s ease;
 }
 
 .nav-btn{

@@ -11,6 +11,7 @@ import paint1 from "./assets/paint1.png";
 import paint2 from "./assets/paint2.png";
 import paint4 from "./assets/paint4.png";
 import Reviews from "./components/Reviews";
+import OurWorks from "./components/Ourworks";
 
 function App() {
 
@@ -71,6 +72,8 @@ function App() {
       <ServiceSection services={services}/>
 
       {/* <Owners /> */}
+      <OurWorks/>
+
 
       <Contact />
       <Reviews/>
