@@ -28,7 +28,7 @@ function Footer() {
           </p>
 
           <div className="footer-content">
-            Office No-7 Near Yatri Hotel,Santacruiz(E) India <br />
+            Office No-7 Near Yatri Hotel,Santacruiz(E), Mumbai, India <br />
             Mon–Sat · 10am–7pm
           </div>
 

@@ -68,7 +68,7 @@ function Contact() {
                 {[
                   ["📞","+919082249851/+917045286805"],
                   ["✉️","mstradingcompany348@gmail.com"],
-                  ["📍","Office No-7 Near Yatri Hotel,Santacruiz(E) India"],
+                  ["📍","Office No-7 Near Yatri Hotel,Santacruiz(E), Mumbai, India"],
                   ["🕒","Mon–Sat · 10AM–7PM"]
                 ].map(
                   ([icon,title,value])=>(
