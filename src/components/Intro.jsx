@@ -3,7 +3,7 @@ import "../Intro.css";
 
   function Intro() {
   return (
-    <section className="intro-section" id="services">
+    <section className="intro-section" id="intro">
       <div className="container-luxury intro-sec">
 
         <p className="intro-offer">

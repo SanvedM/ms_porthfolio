@@ -46,7 +46,7 @@ function Footer() {
 
     <a href="#home">Home</a>
 
-    <a href="#about">About</a>
+    <a href="#intro">About</a>
 
     <a href="#services">Services</a>
 
