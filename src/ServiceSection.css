@@ -1,6 +1,7 @@
 :root {
   --navy: #1b3472;
   --navy-dark: #0f1f45;
+  --swiper-navigation-size: 10px;
 
   --teal: teal;
   --teal-light: #00a8a8;
@@ -324,4 +325,18 @@ font-size: 1.6rem;
 
 .active-card .card-icon i {
   color: white;
+}
+
+
+.detail-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.service-slider-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
 }

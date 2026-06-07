@@ -4,16 +4,22 @@ import "../OurWorks.css";
 import project1 from "../assets/hotel1.jpeg";
 import project2 from "../assets/house1.jpeg";
 import project3 from "../assets/interior1.jpeg";
+
 import project4 from "../assets/interior2.jpeg";
 import project5 from "../assets/st_scool.jpeg";
+import kruna from "../assets/kruna.jpeg";
+import st_hos from "../assets/st_frans_hos.jpeg";
+
+
 
 export default function OurWorks() {
   const projects = [
     { title: "The Florida Grand (Goa)", category: "Hospitality", image: project1 },
     { title: "Bunglow Gandhi Dham, Gujrat", category: "Residential", image: project2 },
-    { title: "Premium Office Space", category: "Commercial", image: project3 },
-    { title: "Luxury Living Room", category: "Interior", image: project4 },
     { title: "ST Francis School (Gaziabad,U.P.)", category: "Exterior", image: project5 },
+
+    { title: "Karuna Hospital", category: "Commercial", image: kruna },
+    { title: "ST Francis Hotel Management (Borivali)", category: "Interior", image: st_hos },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
