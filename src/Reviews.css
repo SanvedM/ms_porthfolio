@@ -145,7 +145,7 @@
 
 /* Right -> Left feel */
 .review-slider{
-    direction:rtl;
+    direction:ltr;
 }
 
 @media(max-width:768px){
